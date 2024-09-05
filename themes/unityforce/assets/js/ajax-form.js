@@ -42,6 +42,11 @@ $(function () {
                         form.find('.error').removeClass('error');
                     }
                     
+                    /*REALÇA DADOS INVALIDOS*/
+                    if (data.clear) {
+                        form.find(':input');
+                    }
+                    
                     //REDIRECIONA
                     if (data.redirect) {
                         $('.workcontrol_upload p').html("Atualizando dados, aguarde!");

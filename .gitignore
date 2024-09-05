@@ -1,0 +1,7 @@
+.htaccess
+.idea
+cache
+sitemap.xsl
+sitemap.xml.gz
+sitemap.xml
+/admin/sitemap.txt

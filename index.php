@@ -145,7 +145,6 @@
 			<meta name="msapplication-TileImage" content="<?= INCLUDE_PATH; ?>/assets/images/favicon/ms-icon-144x144.png">
 			<meta name="theme-color" content="#ffffff">
 
-
 			<link href="<?= INCLUDE_PATH; ?>/assets/bootstrap/bootstrap.min.css" rel="stylesheet">
 			<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
 			<link rel="stylesheet" href="<?= INCLUDE_PATH; ?>/assets/css/aos.css">
@@ -155,6 +154,7 @@
 			<link rel="stylesheet" href="<?= INCLUDE_PATH; ?>/assets/css/custom.css">
 			<link rel="stylesheet" href="<?= INCLUDE_PATH; ?>/assets/css/mobile.css">
 			<link rel="stylesheet" href="<?= INCLUDE_PATH; ?>/assets/css/owl.carousel.css">
+			<link rel="stylesheet" href="<?= BASE; ?>/_cdn/bootcss/fonticon.css">
 			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css">
 
 			<script src="<?= BASE; ?>/_cdn/jquery.js"></script>

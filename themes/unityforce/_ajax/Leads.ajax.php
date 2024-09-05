@@ -368,40 +368,38 @@
 
 				if (array_search('', $PostData)) {
 					$jSON['field'] = array_search('', $PostData);
-					$jSON['trigger'] = AjaxErro('<b> OOPS! </b> Preencha todos os campos obrigatórios!',
+					$jSON['trigger'] = AjaxErro('<b>Oops!</b> Preencha todos os campos obrigatórios!',
 						E_USER_NOTICE);
 
 				} elseif (!Check::Email($PostData['voluntary_email']) || !filter_var($PostData['voluntary_email'],
 						FILTER_VALIDATE_EMAIL)) {
 					$jSON['field'] = 'voluntary_email';
-					$jSON['trigger'] = AjaxErro('<b> OOPS! </b> E-mail informado não é válido!',
+					$jSON['trigger'] = AjaxErro('<b>Oops!</b> E-mail informado não é válido!',
 						E_USER_ERROR);
 
 				} elseif (!isset($PostData['privacy'])) {
 					$jSON['field'] = 'privacy';
-					$jSON['trigger'] = AjaxErro('<b> OOPS! </b> Você precisa estar em consentimento com nossa Política de Privacidade.',
+					$jSON['trigger'] = AjaxErro('<b>Oops!</b> Você precisa estar em consentimento com nossa Política de Privacidade.',
 						E_USER_ERROR);
 
 				} else {
-					var_dump($PostData);
 
-					$PostData['voluntary_name'] = Check::Capitalise($PostData['voluntary_name']);
+					$PostData['voluntary_name'] = Check::getCapilalize($PostData['voluntary_name']);
 					$phoneMask = $PostData['voluntary_phone'];
 					$PostData['voluntary_phone'] = Check::clearNumber($PostData['voluntary_phone']);
+					$PostData['voluntary_cep'] = preg_replace('/[\D]/', '', $PostData['voluntary_cep']);
 					$PostData['voluntary_email'] = mb_strtolower($PostData['voluntary_email']);
 					$PostData['privacy'] = isset($PostData['privacy']) ? 1 : 0;
 					$PostData['status'] = 0;
 
-					/*$Create = new Create();
+					$Create = new Create();
 					$Create->ExeCreate(DB_VOLUNTEERS, $PostData);
 
 					if ($Create->getResult()) {
-						$jSON['trigger'] = AjaxErro("<b> Você foi cadastrado com sucesso!</b>");
-						$jSON['redirect'] = BASE."/obrigado-voluntario&id={$PostData['city_id']}";
-					}*/
+						$jSON['trigger'] = AjaxErro("<p>Obrigado! <b>{$PostData['voluntary_name']}</b>, seu registro foi recebido com sucesso!</p>");
+						$jSON['clear'] = true;
+					}
 
-					/*$voluntaryCity = $Read->LinkResult(DB_CITIES, 'id', $PostData['voluntary_city'], 'name');
-					$eventCity = $Read->LinkResult(DB_CITIES, 'id', $PostData['city_id'], 'name');
 					$logoMail = $Read->LinkResult(DB_TEMPLATE_LOGOS, 'logo_id', 1, 'logo_mail');
 
 					$arrayData = $PostData;
@@ -409,14 +407,11 @@
 					$arrayData['SITE_NAME'] = SITE_NAME;
 					$arrayData['SITE_ADDR_NAME'] = SITE_ADDR_NAME;
 					$arrayData['SITE_ADDR_PHONE_A'] = SITE_ADDR_PHONE_A;
-					$arrayData['SITE_ADDR_EMAIL'] = 'contato@ellalidera2024.com.br';
+					$arrayData['SITE_ADDR_EMAIL'] = SITE_ADDR_EMAIL;
 					$arrayData['SITE_ADDR_SITE'] = SITE_ADDR_SITE;
 					$arrayData['BASE'] = BASE;
 					$arrayData['phone_mask'] = $phoneMask;
-					$arrayData['voluntary_city'] = $voluntaryCity['name'];
-					$arrayData['event_city'] = $eventCity['name'];
 					$arrayData['logo_mail'] = BASE . "/uploads/{$logoMail['logo_mail']}";
-					$arrayData['full_name'] = "{$arrayData['voluntary_name']} {$arrayData['voluntary_lastname']}";
 
 					require_once __DIR__ . './../_app_capture/class/Template.class.php';
 
@@ -424,9 +419,8 @@
 						__DIR__ . '/../templates/'), $arrayData);
 
 					$Email = new Email();
-					//$Email->addFile($anexo);
 					$Email->EnviarMontando(
-						"Nova voluntária(o) registrada no Ella Lidera " . date('Y'),
+						"Novo voluntária(o) registrada(o) site",
 						$MailContent,
 						$PostData['voluntary_name'],
 						$PostData['voluntary_email'],
@@ -441,7 +435,7 @@
 						$ResponseEmail = new Email();
 
 						$ResponseEmail->EnviarMontando(
-							'Confirmação de recebimento Ella Lidera ' . date('Y'),
+							'Confirmação de recebimento Catiane Zanotto - 11112 ',
 							$MailConfirmation,
 							MAIL_SENDER,
 							MAIL_USER,
@@ -452,7 +446,7 @@
 					} else {
 						$jSON['trigger'] = AjaxErro('Desculpe, não foi possível enviar sua mensagem. Entre em contato via E-mail: ' . SITE_ADDR_EMAIL . ' Obrigado!',
 							E_USER_ERROR);
-					}*/
+					}
 				}
 		}
 
@@ -460,7 +454,7 @@
 		if ($jSON) {
 			echo json_encode($jSON);
 		} else {
-			$jSON['trigger'] = AjaxErro('<b class="icon-warning"> OPSS:</b> Desculpe. Mas uma ação do sistema não respondeu corretamente. Ao persistir, contate o desenvolvedor!',
+			$jSON['trigger'] = AjaxErro('<b>Oops!</b> Desculpe. Mas uma ação do sistema não respondeu corretamente. Ao persistir, contate o desenvolvedor!',
 				E_USER_ERROR);
 			echo json_encode($jSON);
 		}
