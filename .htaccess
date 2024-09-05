@@ -1,3 +1,8 @@
+AddHandler application/x-httpd-php74 .php
+<IfModule mod_suphp.c>
+    suPHP_ConfigPath /opt/php74/lib
+</IfModule>
+
 RewriteEngine On
 Options All -Indexes
 
@@ -14,3 +19,5 @@ RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 RewriteCond %{SCRIPT_FILENAME} !-f
 RewriteCond %{SCRIPT_FILENAME} !-d
 RewriteRule ^(.*)$ index.php?url=$1
+
+AddHandler application/x-httpd-php74 .php

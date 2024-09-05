@@ -2,15 +2,15 @@
 <section class="video-section w-100 float-left padding-top padding-bottom">
 	<div class="container">
 		<div class="generic-title text-center">
-			<span class="small-txt d-block" data-aos="fade-up" data-aos-duration="700">UNITY FORCE IN MOTION</span>
-			<h2 data-aos="fade-up" data-aos-duration="700">WATCH, ENGAGE,AND IGNITE
-				THE FUTURE!</h2>
+			<span class="small-txt d-block" data-aos="fade-up" data-aos-duration="700">A VOZ FEMININA DO
+				EMPREENDEDORISMO EM CAXIAS DO SUL</span>
+			<h2 data-aos="fade-up" data-aos-duration="700">ASSISTA, CONHEÇA MINHA TRAJETÓRIA!</h2>
 		</div>
 		<div class="unity-video-con">
 			<div class="video-play-icon d-inline-block">
 				<a href="javascript:void(0)" onclick="lightbox_open();">
 					<figure class="mb-0 d-inline-block" data-aos="fade-up" data-aos-duration="700">
-						<img src="assets/images/video-play-icon.png" alt="video-play-icon">
+						<img src="<?= INCLUDE_PATH; ?>/assets/images/video-play-icon.png" alt="video-play-icon">
 					</figure>
 				</a>
 			</div>
@@ -18,8 +18,8 @@
 				<a class="boxclose" id="boxclose" onclick="lightbox_close();"></a>
 				<div id="VisaChipCardVideo">
 					<iframe width="560" height="315"
-					        src="https://www.youtube.com/embed/_fDNWzU88g0?si=GNyq3_kf1-gcWomq"
-					        title="YouTube video player"></iframe>
+					        src="https://www.youtube.com/embed/rNs8O2uMPK4?si=uPaDMQxi1QjbTSOG"
+					        title="Catiane Zanotto - Minha História"></iframe>
 				</div>
 			</div>
 

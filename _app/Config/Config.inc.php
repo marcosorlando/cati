@@ -38,9 +38,10 @@
          * Consulte estes dados com o serviço de hospedagem
          */
         define('MAIL_HOST', 'mail.catianezanotto.com.br'); //Servidor de e-mail
-        define('MAIL_PORT', '587'); //Porta de envio
-        define('MAIL_USER', 'noreply@catianezanotto.com.br'); //E-mail de envio
-        define('MAIL_SMTP', 'noreply@catianezanotto.com.br'); //E-mail autenticador do envio (Geralmente igual ao MAIL_USER,
+        define('MAIL_PORT', '465'); //Porta de envio
+        define('MAIL_USER', 'naoresponda@catianezanotto.com.br'); //E-mail de envio
+        define('MAIL_SMTP', 'naoresponda@catianezanotto.com.br'); //E-mail autenticador do envio (Geralmente igual ao
+	    // MAIL_USER,
         // exceto em serviços como AmazonSES, sendgrid...)
         define('MAIL_PASS', 'Nor5pl@yC4t!4n3Z4n0tt0'); //Senha do e-mail de envio
         define('MAIL_SENDER', 'Catiane Zanotto'); //Nome do remetente de e-mail
@@ -71,14 +72,14 @@
         define('APP_SEARCH', 1); //Relatório de Pesquisas
         define('APP_PAGES', 1); //Páginas
         define('APP_COMMENTS', 1); //Comentários
-        define('APP_SLIDE', 1); //Slide Em Destaque
+        define('APP_SLIDE', 0); //Slide Em Destaque
         define('APP_USERS', 1); //Usuários
 
 	    /*
         * CUSTOM MODULES
         * Módulos customizados para o cliente!
         */
-        define('APP_VIDEOS', 1); //Vídeos Youtube
+        define('APP_VIDEOS', 0); //Vídeos Youtube
         define('APP_MATERIALS', 0); //Materiais Ricos
         define('APP_DEPOSITIONS', 1); //Depoimentos
         define('APP_ALBUMS', 0); //Albuns de Fotos
@@ -126,7 +127,7 @@
         define('LEVEL_WC_CONFIG_API', 10);
         define('LEVEL_WC_CONFIG_CODES', 10);
 
-        /*
+        /**
          * FB SEGMENT
          * Configura ultra segmentação de público no facebook
          * !!!! IMPORTANTE :: Para utilizar ultra segmentação de produtos e imóveis
@@ -141,7 +142,7 @@
         define('SEGMENT_GL_ADWORDS_ID', ''); //ID do pixel do Adwords (-to do o site)
         define('SEGMENT_GL_ADWORDS_LABEL', ''); //Label do pixel do Adwords (to do o site)
 
-        /*
+        /**
          * APP LINKS
          * Habilitar ou desabilitar campos de links alternativos
          */

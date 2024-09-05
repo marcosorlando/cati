@@ -1,50 +1,30 @@
-<!-- BLOG SECTION START HERE -->
-<section class="latest-blogs-section w-100 float-left padding-top padding-bottom">
-	<div class="container">
-		<div class="blog-inner-con">
-			<div class="generic-title text-center">
-				<span class="small-txt d-block" data-aos="fade-up" data-aos-duration="700">NEWS AND UPDATES</span>
-				<h2 data-aos="fade-up" data-aos-duration="700">LATEST NEWS & ARTICLES</h2>
-			</div>
-			<div class="blog-boxes">
-				<div class="blog-single-box">
-					<div class="blog-img-con" data-aos="fade-up" data-aos-duration="700">
-						<figure class="mb-0">
-							<img src="assets/images/blog-img1.jpg" alt="blog-img1">
-						</figure>
-						<span class="d-inline-block">Campaign Trail</span>
+<?php
+
+	$Post = new Read();
+	$Post->FullRead(
+		"SELECT p.post_date, p.post_name, p.post_title, p.post_cover, c.category_title FROM " . DB_POSTS . " p, " . DB_CATEGORIES . " c WHERE p.post_category = c.category_id AND p.post_status = :st AND p.post_date < NOW() ORDER BY p.post_date DESC LIMIT :limit",
+		"st=1&limit=3"
+	);
+
+	if ($Post->getResult()) {
+		?>
+		<section class="latest-blogs-section w-100 float-left padding-top padding-bottom">
+			<div class="container">
+				<div class="blog-inner-con">
+					<div class="generic-title text-center">
+						<span class="small-txt d-block" data-aos="fade-up" data-aos-duration="700">NOTÍCIAS E ATUALIZAÇÕES</span>
+						<h2 data-aos="fade-up" data-aos-duration="700">ÚLTIMAS NOTÍCIAS E ARTIGOS</h2>
 					</div>
-					<div class="blog-txt-box" data-aos="fade-up" data-aos-duration="700">
-						<span class="d-block">Nov 11, 2023</span>
-						<h4><a href="single-blog.html">Lorem ipsum dolor sita consectetur adip.</a></h4>
-					</div>
-				</div>
-				<div class="blog-single-box">
-					<div class="blog-img-con" data-aos="fade-up" data-aos-duration="700">
-						<figure class="mb-0">
-							<img src="assets/images/blog-img2.jpg" alt="blog-img2">
-						</figure>
-						<span class="d-inline-block">Candidate Spotlight</span>
-					</div>
-					<div class="blog-txt-box" data-aos="fade-up" data-aos-duration="700">
-						<span class="d-block">Dec 18, 2023</span>
-						<h4><a href="single-blog.html">Dolor sit amet, consec adipiscing elit, sed.</a></h4>
-					</div>
-				</div>
-				<div class="blog-single-box">
-					<div class="blog-img-con" data-aos="fade-up" data-aos-duration="700">
-						<figure class="mb-0">
-							<img src="assets/images/blog-img3.jpg" alt="blog-img3">
-						</figure>
-						<span class="d-inline-block">Election 2024</span>
-					</div>
-					<div class="blog-txt-box" data-aos="fade-up" data-aos-duration="700">
-						<span class="d-block">Jan 10, 2024</span>
-						<h4><a href="single-blog.html">Sit amet, consecteturs elit, sed.</a></h4>
+					<div class="blog-boxes">
+						<?php
+							foreach ($Post->getResult() as $Post) {
+								extract($Post);
+								require REQUIRE_PATH . '/inc/post-index.php';
+							}
+						?>
 					</div>
 				</div>
 			</div>
-		</div>
-	</div>
-</section>
-<!-- BLOG SECTION END HERE -->
+		</section>
+		<?php
+	} ?>

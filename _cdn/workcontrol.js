@@ -55,7 +55,10 @@ $(function () {
                     $('.wc_complemento').val(data.complemento);
                     $('.wc_localidade').val(data.localidade);
                     $('.wc_logradouro').val(data.logradouro);
+                    $('.wc_ibge').val(data.ibge);
                     $('.wc_uf').val(data.uf);
+                }else{
+                
                 }
             }, 'json');
         }
@@ -340,4 +343,29 @@ function validarCNPJ(cnpj) {
     if (resultado != digitos.charAt(1)) return false;
     
     return true;
+}
+
+//############## MODAL MESSAGE
+function Trigger(Message) {
+    TriggerClose();
+    $('body').before("<div class='trigger_modal'>" + Message + "</div>");
+    
+    $('.trigger_ajax').fadeIn().append("<div style='background-color: rgba(0,0,0,0.3); heigth: 2px; border-radius:" + " 4px; padding: 4px; width: 100%; position: absolute; left: 0; bottom: 0;'></div>");
+    
+    $('.trigger_ajax div:last-child').animate({
+        width: '-=98%'
+    }, 5000, 'swing');
+    
+    setTimeout(function () {
+        let divWidth = $('.trigger_modal').width() + 20
+        $('.trigger_modal').animate({
+            right: -divWidth
+        }, 100)
+    }, 5000);
+}
+
+function TriggerClose() {
+    $('.trigger_ajax').fadeOut('fast', function () {
+        $(this).remove();
+    });
 }

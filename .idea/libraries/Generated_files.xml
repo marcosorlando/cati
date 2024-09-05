@@ -1,0 +1,22 @@
+<component name="libraryTable">
+  <library name="Generated files" type="javaScript">
+    <properties>
+      <sourceFilesUrls>
+        <item url="file://$PROJECT_DIR$/_cdn/workcontrol.min.js" />
+        <item url="file://$PROJECT_DIR$/themes/unityforce/assets/js/ajax-form.min.js" />
+        <item url="file://$PROJECT_DIR$/themes/unityforce/assets/js/contact-form.min.js" />
+        <item url="file://$PROJECT_DIR$/themes/unityforce/lp/js/lp.min.js" />
+        <item url="file://$PROJECT_DIR$/themes/unityforce/lp/js/lp.min.min.js" />
+      </sourceFilesUrls>
+    </properties>
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/_cdn/workcontrol.min.js" />
+      <root url="file://$PROJECT_DIR$/themes/unityforce/assets/js/ajax-form.min.js" />
+      <root url="file://$PROJECT_DIR$/themes/unityforce/assets/js/contact-form.min.js" />
+      <root url="file://$PROJECT_DIR$/themes/unityforce/lp/js/lp.min.js" />
+      <root url="file://$PROJECT_DIR$/themes/unityforce/lp/js/lp.min.min.js" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

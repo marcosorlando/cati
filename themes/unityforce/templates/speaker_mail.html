@@ -1,0 +1,36 @@
+<table width="550" border="0" style="width:500px; border: none; color: #333333; font-family: 'Verdana', sans-serif">
+	<tr>
+		<td>
+			<p>Novo palestrante cadastrado no Site <b>ellalidera2024.com.br</b></p>
+			<p><b>Nome do Candidato(a):</b> {full_name} </p>
+			<p><b>Telefone:</b> <a href="https://wa.me/{phone}">{phone_mask}</a></p>
+			<p><b>E-mail:</b> {speaker_email} </p>
+			<p><b>Cidade/UF:</b> {speaker_city} - {speaker_state} </p>
+			<p><b>Registrado no Ella Lidera de</b> <strong style="color: crimson">{event_city}</strong></p>
+			<p><b>Minibio:</b> <br>
+				{speaker_bio}
+			</p>
+			<p><b>Por quer participar do Ella Lidera 2024</b>
+			<br>
+				{speaker_why_lecture}
+			</p>
+			<br>
+			{speaker_yes}
+			{speaker_lecture_link}
+			{speaker_social_media}
+			
+			<br><br>
+			<p style="font-size: 1em">
+				Atenciosamente,<br>
+				Equipe {SITE_ADDR_NAME} 2024<br><br>
+				<img src="{logo_mail}" alt="Atenciosamente, {SITE_NAME}"
+				     title="Atenciosamente, {SITE_NAME}"/>
+				<br><br><br>
+				Telefone:<b> {SITE_ADDR_PHONE_A}</b><br>
+				E-mail: {SITE_ADDR_EMAIL}<br><br>
+				Visite nosso site: <a title="{SITE_NAME}" href="{BASE}">{SITE_ADDR_SITE}</a><br>
+			</p>
+		</td>
+	</tr>
+</table>
+<style>body, img {max-width: 550px !important;height: auto !important;} p {margin-botton: 15px 0 !important;}</style>

@@ -10,9 +10,11 @@
 <div class="header-main-con w-100 float-left" id="menu">
 	<div class="container-fluid">
 		<nav class="navbar navbar-expand-lg navbar-light">
-			<a class="navbar-brand" href="index.html">
+			<a class="navbar-brand" href="<?= BASE; ?>">
 				<figure class="mb-0">
-					<img src="assets/images/header-logo.png" alt="header-logo" loading="lazy">
+					<img id="logo-header" src="<?=INCLUDE_PATH?>/assets/images/header-logo.png" alt="Catiane Zanotto
+					para Vereadora
+					11112" loading="lazy">
 				</figure>
 			</a>
 			<button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
@@ -24,17 +26,19 @@
 			</button>
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav">
-					<li class="nav-item dropdown">
-						<a class="nav-link active dropdown-toggle p-0 " href="#" id="navbarDropdown4" role="button"
-						   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							HOME
+					<li class="nav-item">
+						<a class="nav-link p-0 " href="<?= BASE; ?>">
+							<i class="fas fa-home"></i> HOME
 						</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link p-0 " href="about.html">SOBRE MIM</a>
+						<a class="nav-link p-0 " href="<?= BASE; ?>/sobre">SOBRE MIM</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link p-0" href="contact.html">CONTATO</a>
+						<a class="nav-link p-0 " href="<?= BASE; ?>/artigos/minhas-propostas">PROPOSTAS</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link p-0" href="<?= BASE; ?>/contato">CONTATO</a>
 					</li>
 
 					<?php
@@ -63,14 +67,14 @@
 							}
 						}
 					?>
-
 				</ul>
 			</div>
 			<div class="nav-btns d-flex align-items-center">
 				<ul class="list-unstyled mb-0 d-flex">
-					<li><a href="https://www.facebook.com/login/"><i class="fab fa-facebook-f"></i></a></li>
-					<li><a href="https://twitter.com/i/flow/login"><i class="fab fa-twitter"></i></a></li>
-					<li><a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a></li>
+					<li><a href="https://www.facebook.com/<?= SITE_SOCIAL_FB_PAGE ?>"><i class="fab
+					fa-facebook-f"></i></a></li>
+					<li><a href="https://instagram.com/<?= SITE_SOCIAL_INSTAGRAM ?>"><i class="fab fa-instagram"></i></a></li>
+					<li><a href="https://www.linkedin.in/<?= SITE_SOCIAL_LINKEDIN?>"><i class="fab fa-linkedin"></i></a></li>
 				</ul>
 				<div class="donate-btn">
 					<a href="donation.html">

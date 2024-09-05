@@ -70,6 +70,7 @@
 			<meta name="description" content="<?= $SEO->getDescription(); ?>"/>
 			<meta name="robots" content="index, follow"/>
 			<link rel="base" href="<?= BASE; ?>"/>
+			<link rel="paththeme" href="<?= INCLUDE_PATH; ?>"/>
 			<link rel="canonical" href="<?= BASE; ?>/<?= $getURL; ?>"/>
 			<?php
 
@@ -144,14 +145,17 @@
 			<meta name="msapplication-TileImage" content="<?= INCLUDE_PATH; ?>/assets/images/favicon/ms-icon-144x144.png">
 			<meta name="theme-color" content="#ffffff">
 
-			<!-- Include All CSS here-->
+
+			<link href="<?= INCLUDE_PATH; ?>/assets/bootstrap/bootstrap.min.css" rel="stylesheet">
 			<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
-			<link rel="stylesheet" href="<?= INCLUDE_PATH; ?>/assets/bootstrap/bootstrap.min.css">
 			<link rel="stylesheet" href="<?= INCLUDE_PATH; ?>/assets/css/aos.css">
-			<link rel="stylesheet" href="<?= INCLUDE_PATH; ?>/assets/css/owl.carousel.css">
+			<link rel="stylesheet" href="<?= INCLUDE_PATH; ?>/assets/css/custom-style.css">
+			<link rel="stylesheet" href="<?= INCLUDE_PATH; ?>/assets/css/special-classes.css">
+			<link rel="stylesheet" href="<?= INCLUDE_PATH; ?>/assets/css/responsive.css">
 			<link rel="stylesheet" href="<?= INCLUDE_PATH; ?>/assets/css/custom.css">
 			<link rel="stylesheet" href="<?= INCLUDE_PATH; ?>/assets/css/mobile.css">
-			<!-- End Include All CSS -->
+			<link rel="stylesheet" href="<?= INCLUDE_PATH; ?>/assets/css/owl.carousel.css">
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css">
 
 			<script src="<?= BASE; ?>/_cdn/jquery.js"></script>
 			<script src="<?= BASE; ?>/_cdn/workcontrol.js"></script>
@@ -364,14 +368,16 @@
 
 			<a id="button"></a>
 			<!-- js start -->
-			<script src="<?= INCLUDE_PATH; ?>/assets/js/jquery.min.js"></script>
-			<script src="<?= INCLUDE_PATH; ?>/assets/js/popper.min.js"></script>
+<!--			<script src="<?php /*= INCLUDE_PATH; */?>/assets/js/jquery.min.js"></script>
+-->			<script src="<?= INCLUDE_PATH; ?>/assets/js/popper.min.js"></script>
 			<script src="<?= INCLUDE_PATH; ?>/assets/js/bootstrap.min.js"></script>
-			<script src="<?= INCLUDE_PATH; ?>/assets/js/aos.js"></script>
 			<script src="<?= INCLUDE_PATH; ?>/assets/js/owl.carousel.js"></script>
+			<script src="<?= INCLUDE_PATH; ?>/assets/js/aos.js"></script>
 			<script src="<?= INCLUDE_PATH; ?>/assets/js/custom.js"></script>
-			<script src="<?= INCLUDE_PATH; ?>/assets/js/contact-form.js"></script>
-			<script src="<?= INCLUDE_PATH; ?>/assets/js/jquery.validate.js"></script>
+			<script src="<?= INCLUDE_PATH; ?>/assets/js/ajax-form.js"></script>
+		<!--	<script src="<php /*= INCLUDE_PATH; */?>/assets/js/contact-form.js"></script>
+			<script src="<php /*= INCLUDE_PATH; */?>/assets/js/jquery.validate.js"></script>-->
+
 			<script>
                 AOS.init();
 			</script>

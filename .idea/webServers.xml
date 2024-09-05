@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="b5c0eb92-edd3-4610-9f55-7acd946a7968" name="PRODUCTION" url="http://ftp.catianezanotto.com.br">
+        <fileTransfer rootFolder="/public_html" host="ftp.catianezanotto.com.br" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

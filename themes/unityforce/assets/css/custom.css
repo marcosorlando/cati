@@ -5,15 +5,21 @@
     --primary-color:#ffffff;
     --secondary-color:#333;
     --thirty-color:#FFD002;
-    --accent:#532680;
+    --accent:#003973;
     --text-color: #555555;
-    --button-color: #2bace4;
+    --button-color: #00aeea;
+    --bg-color-one:#003973;
+    --bg-color-two:#00aeea;
+    --bg-color-three:#FFD002;
+    --bg-gradiente-one: linear-gradient(to right, var(--bg-color-two) 0%,var(--bg-color-one) 100%);
+    --bg-gradiente-two: linear-gradient(to bottom, #00aeeaBF 0%,#003973BF 100%);
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-size: 16px;
 }
 
 html {
@@ -76,6 +82,8 @@ span.small-txt::before{
     left: 50%;
     transform: translateX(-50%);
 }
+.bold{font-weight: 600 !important;}
+
 .generic-title span {
     margin-bottom: 22px;
 }
@@ -193,9 +201,10 @@ a:hover {
 }
 .header-main-con .donate-btn a {
     padding: 14px 31px 14px 32px;
-    color: var(--primary-color);
-    background: var(--secondary-color);
+    color: var(--secondary-color);
+    background: var(--thirty-color);
     transition: .3s ease-in-out;
+    font-weight: 600;
 }
 .header-main-con .donate-btn a:hover{
     color: var(--primary-color);
@@ -363,7 +372,7 @@ a:hover {
 .joining-main-con{
     position: relative;
     padding: 41px 48px 43px;
-    background: linear-gradient(to right,  rgba(34,47,100,1) 0%,rgba(191,11,48,1) 100%);
+    background: var(--bg-gradiente-one);
 }
 .joining-main-con::after {
     content: "";
@@ -492,7 +501,7 @@ a:hover {
     background: url(../images/video-section-bg-img.jpg) no-repeat center;
     background-size: cover;
     position: relative;
-    z-index: 9999;
+    z-index: 9;
 }
 .video-section::after{
     content: "";
@@ -501,7 +510,7 @@ a:hover {
     position: absolute;
     left: 0;
     top: 0;
-    background: linear-gradient(to bottom, rgb(34 47 100 / 75%) 0%,rgb(191 11 48 / 75%) 100%);
+    background: var(--bg-gradiente-two);
 }
 .video-section .generic-title{
     z-index: 1;
@@ -689,7 +698,7 @@ a:hover {
     position: absolute;
     left: 0;
     top: 0;
-    background: linear-gradient(to bottom, rgb(34 47 100 / 75%) 0%,rgb(191 11 48 / 75%) 100%);
+    background: var(--bg-gradiente-two);
 }
 .blog-inner-con{
     position: relative;
@@ -735,6 +744,9 @@ a:hover {
     font-size: 14px;
     line-height: 16px;
     margin-bottom: 12px;
+}
+.blog-txt-box span > i{
+    color: #00aeea;
 }
 .blog-txt-box h4{
     position: relative;
@@ -787,7 +799,7 @@ a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(to right, rgba(34,47,100,1) 0%,rgba(191,11,48,1) 100%);
+    background: var(--bg-gradiente-one);
     border-radius: 100%;
     border: 5px solid var(--primary-color);
     position: absolute;
@@ -876,25 +888,29 @@ a:hover {
 }
 /* feedback section styling end here */
 /* donate section styling start here */
+
 .donate-suggestion {
     padding: 30px;
     display: grid;
     justify-content: space-between;
     grid-template-columns: auto auto;
-    background: linear-gradient(to right, rgba(34,47,100,1) 0%,rgba(191,11,48,1) 100%);
+    background: linear-gradient(to right, var(--bg-color-two) 0%,var(--bg-color-one) 100%);
     align-items: center;
     margin-bottom: -54px;
     position: relative;
     z-index: 1;
+
 }
+.donate-suggestion h3 {color: #FFFFFF;}
 .donate-suggestion .generic-btn a {
     padding: 12px 26px;
 }
-.donate-suggestion .generic-btn a:hover{
-    background: var(--button-color);
+.donate-suggestion .generic-btn a {
+    padding: 12px 26px;
+    background: #ffd000;
 }
-.donate-suggestion h3{
-    color: var(--primary-color);
+.donate-suggestion .generic-btn a:hover{
+    background: #2fcc24;
 }
 /* donate section styling end here */
 /* footer section styling start here */
@@ -1405,7 +1421,7 @@ a:hover {
     position: absolute;
     left: 0;
     top: 0;
-    background: linear-gradient(to bottom, rgb(34 47 100 / 75%) 0%,rgb(191 11 48 / 75%) 100%);
+    background: var(--bg-gradiente-two);
 }
 .index2-video-left-con::after {
     content: "";
@@ -1632,6 +1648,261 @@ a:hover {
     border-top: 1px solid #e9e9e9;
     border-bottom: 1px solid #e9e9e9;
 }
+
+
+/*TRIGGER*/
+.trigger {
+    display: flex;
+    position: relative;
+    width: 100%;
+    padding: 15px;
+    background: #333333;
+    font-size: 1em;
+    font-weight: 500;
+    color: #FFFFFF;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 8px 2px rgba(0, 0, 0, 0.1), inset 2px 2px 8px 2px rgba(0, 0, 0, 0.1);
+    align-items: center;
+}
+
+.trigger_none {
+    margin-bottom: 0;
+}
+.trigger *{
+    color: #FFFFFF;
+}
+
+.trigger::before{
+    font-size: 2em;
+    vertical-align: middle;
+    color: #ffffff !important;
+    margin-right: 8px;
+    padding: 5px 16px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: rgba(0,0,0,0.3);
+    text-shadow: -2px -2px 3px rgba(0,0,0,0.2);
+    box-shadow: 2px 2px 3px rgba(0,0,0,0.2), inset 1px 1px 3px rgba(0,0,0,0.1);
+}
+
+.trigger p{
+    margin: 0;
+    font-size: 1rem;
+}
+.trigger b{
+    color: #2a2a2a;
+    flex-wrap: nowrap;
+}
+
+.trigger_ajax {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
+}
+
+.trigger_success {
+    background-color: #00B494;
+}
+
+.trigger_info {
+    background-color: #0E96E5;
+}
+
+.trigger_alert {
+    background-color: #FAAD50;
+}
+
+.trigger_error {
+    background-color: #F45563;
+}
+
+.trigger_success::before {
+    font-family: "Font Awesome 5 Free" !important;
+    content: '\f00c';
+}
+
+.trigger_info::before {
+    font-family: "Font Awesome 5 Free" !important;
+     content: '\f129';
+}
+
+.trigger_alert::before {
+    font-family: "Font Awesome 5 Free" !important;
+    content: '\f071';
+}
+
+.trigger_error::before {
+    font-family: "Font Awesome 5 Free" !important;
+    content: "\f05e";
+}
+
+.trigger_modal {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 460px;
+    max-width: 80%;
+    padding: 20px 20px 0 0;
+    cursor: pointer;
+    z-index: 999;
+}
+
+.trigger_modal .trigger {
+    padding: 20px;
+    margin: auto 30px auto auto;
+}
+
+/*MODAL*/
+.modal_confirm {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 999;
+}
+
+.modal_confirm_content {
+    display: block;
+    width: 500px;
+    max-width: 90%;
+    margin: 10% auto;
+    background: #FFFFFF;
+    padding: 25px;
+    box-shadow: 0 0 5px 0 #000000;
+}
+
+.modal_confirm_content .title {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.modal_confirm_content .message {
+    font-size: 0.875em;
+    margin: 10px 0 20px 0;
+}
+
+.modal_confirm_content .btn {
+    font-size: 0.8em;
+}
+
+.label_check {
+    cursor: pointer;
+    display: inline-block;
+    padding: 6px 0;
+    font-size: 0.875em;
+    cursor: pointer;
+    position: relative;
+    padding-left: 22px;
+    margin-right: 15px;
+    width: auto;
+}
+
+.label_check input {
+    cursor: pointer;
+    width: auto;
+    position: absolute;
+    left: 4px;
+    top: 9px;
+    height: 25px
+}
+.cta-city a{
+    margin-bottom: 15px;
+    display: block;
+}
+
+/*BTN Liga/Desliga*/
+.switch {
+    display: inline-block;
+    position: relative;
+    width: 58px !important;
+    vertical-align: top;
+}
+
+.switch > label {
+    display: block;
+    position: relative;
+    height: 25px;
+    background-color: #F33E49;
+    border: 2px solid #D90719;
+    transition: all 0.15s ease-in-out;
+    font-size: 13px;
+    text-align: center;
+    line-height: 20px;
+    border-radius: 12px;
+    color: #FFFFFF;
+    cursor: pointer !important;
+}
+
+.switch > label:before {
+    content: attr(data-off);
+    position: absolute;
+    top: 0;
+    right: 3px;
+    width: 33px;
+    text-shadow: -1px -1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.switch > label:after {
+    content: ' ';
+    display: block;
+    width: 17px;
+    height: 17px;
+    margin: 2px;
+    background: #FFFFFF;
+    border-radius: 50%;
+    box-shadow: -1px -1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.switch > input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: inherit;
+    height: inherit;
+    opacity: 0;
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+.switch > input:checked + label {
+    padding-left: 33px;
+    background-color: #0B8D4D;
+    border-color: #04DA71;
+    cursor: pointer !important;
+}
+
+.switch > input:checked + label:before {
+    content: attr(data-on);
+    position: absolute;
+    top: 0;
+    left: 3px;
+    width: 33px;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+.switch > input:checked + label:after {
+    margin: 2px;
+    width: 17px;
+    height: 17px;
+    background-color: #FFFFFF;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+.error{
+    border: 2px solid red !important;
+}
+.form_load{
+    display: none;
+    margin: 0 5px;
+}
+
 /*  */
 .fadeOut  {
     -webkit-animation-name : fadeOut  ;
@@ -1740,7 +2011,7 @@ a:hover {
 }
 .index2-donation-section::after {
     content: "";
-    background: linear-gradient(to right, rgb(34 47 100 / 84%) 0%,rgb(191 11 48 / 75%) 100%);
+    background: var(--bg-gradiente-two);
     width: 100%;
     height: 100%;
     position: absolute;
@@ -1785,10 +2056,11 @@ a:hover {
 .sub-banner-section {
     background: url(../images/sub-banner-bg-img.jpg) no-repeat center;
     background-size: cover;
-    height: 421px;
+    height: 400px;
     position: relative;
     overflow: hidden;
     padding-top: 13px;
+    padding-bottom: 0;
 }
 .sub-banner-section::after{
     content: "";
@@ -1856,10 +2128,10 @@ a:hover {
 }
 .sub-banner-right-con figure::before {
     content: "";
-    background: #034d98;
+    background: var(--bg-color-one);
     width: 814px;
     height: 814px;
-    border: 30px solid #013971;
+    border: 30px solid var(--bg-color-three);
     border-radius: 100%;
     position: absolute;
     left: 52%;
@@ -1882,7 +2154,7 @@ a:hover {
     z-index: 2;
 }
 .sub-banner-left-con {
-    margin-top: -40px;
+    /* margin-top: -40px; */
 }
 /* sub banner section styling end here */
 /* team section styling start here */
@@ -2094,7 +2366,7 @@ a:hover {
 
 @-webkit-keyframes spineer {
     from {
-        box-shadow: 0 0 0 0 rgb(191, 11, 48, .99)
+        box-shadow: 0 0 0 0 rgb(255, 208, 2, .99)
     }
 
     to {
@@ -2104,7 +2376,7 @@ a:hover {
 
 @keyframes spineer {
     from {
-        box-shadow: 0 0 0 0 rgb(191, 11, 48, .99)
+        box-shadow: 0 0 0 0 rgb(255, 208, 2, .99)
     }
 
     to {

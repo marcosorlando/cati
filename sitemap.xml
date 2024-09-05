@@ -2,194 +2,104 @@
 <?xml-stylesheet type="text/xsl" href="sitemap.xsl"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>https://localhost/cli_travi</loc>
-<lastmod>2024-08-16T04:22:46+00:00</lastmod>
+<loc>https://localhost/cati</loc>
+<lastmod>2024-09-04T10:40:48+00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>1.0</priority >
 </url>
 <url>
-<loc>https://localhost/cli_travi/sobre</loc>
+<loc>https://localhost/cati/sobre</loc>
 <lastmod>2018-05-08T17:17:41+00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority >
 </url>
 <url>
-<loc>https://localhost/cli_travi/contato</loc>
+<loc>https://localhost/cati/contato</loc>
 <lastmod>2017-12-12T22:48:33+00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority >
 </url>
 <url>
-<loc>https://localhost/cli_travi/materiais</loc>
+<loc>https://localhost/cati/materiais</loc>
 <lastmod>2023-10-13T21:24:24+00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority >
 </url>
 <url>
-<loc>https://localhost/cli_travi/ouvidoria</loc>
+<loc>https://localhost/cati/ouvidoria</loc>
 <lastmod>2024-05-08T18:34:25+00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority >
 </url>
 <url>
-<loc>https://localhost/cli_travi/politica-de-protecao-de-dados</loc>
+<loc>https://localhost/cati/politica-de-protecao-de-dados</loc>
 <lastmod>2023-10-19T13:43:37+00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority >
 </url>
 <url>
-<loc>https://localhost/cli_travi/representantes</loc>
+<loc>https://localhost/cati/representantes</loc>
 <lastmod>2023-09-25T22:21:51+00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority >
 </url>
 <url>
-<loc>https://localhost/cli_travi/cotacao</loc>
+<loc>https://localhost/cati/cotacao</loc>
 <lastmod>2019-07-26T17:19:57+00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority >
 </url>
 <url>
-<loc>https://localhost/cli_travi/trabalhe-conosco</loc>
+<loc>https://localhost/cati/trabalhe-conosco</loc>
 <lastmod>2023-12-15T17:27:33+00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority >
 </url>
 <url>
-<loc>https://localhost/cli_travi/artigos/blog</loc>
+<loc>https://localhost/cati/artigos/blog</loc>
 <lastmod>2018-06-02T16:36:07+00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority >
 </url>
 <url>
-<loc>https://localhost/cli_travi/artigos/noticias</loc>
+<loc>https://localhost/cati/artigos/noticias</loc>
 <lastmod>2018-08-01T09:12:33+00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority >
 </url>
 <url>
-<loc>https://localhost/cli_travi/artigos/nr12</loc>
+<loc>https://localhost/cati/artigos/nr12</loc>
 <lastmod>2023-10-18T23:29:33+00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority >
 </url>
 <url>
-<loc>https://localhost/cli_travi/artigos/solucoes-em-plasticos-industriais</loc>
+<loc>https://localhost/cati/artigos/solucoes-em-plasticos-industriais</loc>
 <lastmod>2023-10-18T23:04:18+00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority >
 </url>
 <url>
-<loc>https://localhost/cli_travi/artigos/usinagem-de-plasticos</loc>
+<loc>https://localhost/cati/artigos/usinagem-de-plasticos</loc>
 <lastmod>2018-06-02T16:26:37+00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority >
 </url>
 <url>
-<loc>https://localhost/cli_travi/artigo/https-www-youtube-com-watch-v-haguotijlvw</loc>
+<loc>https://localhost/cati/artigo/https-www-youtube-com-watch-v-haguotijlvw</loc>
 <lastmod>2023-10-18T20:30:00+00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.9</priority >
 </url>
 <url>
-<loc>https://localhost/cli_travi/artigo/engenharia-e-alta-performance-travi-plasticos-industriais</loc>
+<loc>https://localhost/cati/artigo/engenharia-e-alta-performance-travi-plasticos-industriais</loc>
 <lastmod>2023-10-18T19:32:00+00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.9</priority >
 </url>
 <url>
-<loc>https://localhost/cli_travi/artigo/usinagem-de-plasticos-3-fatores-que-voce-precisa-saber</loc>
+<loc>https://localhost/cati/artigo/usinagem-de-plasticos-3-fatores-que-voce-precisa-saber</loc>
 <lastmod>2023-09-14T08:33:00+00:00</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.9</priority >
-</url>
-<url>
-<loc>https://localhost/cli_travi/artigo/usinagem-de-plasticos-tudo-que-voce-precisa-saber</loc>
-<lastmod>2021-09-14T22:39:00+00:00</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.9</priority >
-</url>
-<url>
-<loc>https://localhost/cli_travi/produtos/celtrav</loc>
-<lastmod>2023-10-03T17:38:57+00:00</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.9</priority >
-</url>
-<url>
-<loc>https://localhost/cli_travi/produtos/pe-ultra</loc>
-<lastmod>2020-07-06T11:23:52+00:00</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.9</priority >
-</url>
-<url>
-<loc>https://localhost/cli_travi/produtos/plastomero-t</loc>
-<lastmod>2020-07-06T11:24:07+00:00</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.9</priority >
-</url>
-<url>
-<loc>https://localhost/cli_travi/produtos/platek</loc>
-<lastmod>2020-07-06T11:24:20+00:00</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.9</priority >
-</url>
-<url>
-<loc>https://localhost/cli_travi/produtos/platek-ad</loc>
-<lastmod>2020-07-06T11:24:32+00:00</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.9</priority >
-</url>
-<url>
-<loc>https://localhost/cli_travi/produtos/politrav</loc>
-<lastmod>2020-07-06T11:24:40+00:00</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.9</priority >
-</url>
-<url>
-<loc>https://localhost/cli_travi/produtos/produtos</loc>
-<lastmod>2020-07-06T11:23:16+00:00</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.9</priority >
-</url>
-<url>
-<loc>https://localhost/cli_travi/produtos/tranyl</loc>
-<lastmod>2020-07-06T11:24:47+00:00</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.9</priority >
-</url>
-<url>
-<loc>https://localhost/cli_travi/produto/malhas-de-politrav-para-peneiras-vibratorias</loc>
-<lastmod>2023-10-18T15:38:05+00:00</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.9</priority >
-</url>
-<url>
-<loc>https://localhost/cli_travi/produto/batentes-celtrav-1697641273</loc>
-<lastmod>2023-10-18T14:42:51+00:00</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.9</priority >
-</url>
-<url>
-<loc>https://localhost/cli_travi/produto/roldanas-em-tranyl-para-guindastes</loc>
-<lastmod>2023-10-17T19:28:47+00:00</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.9</priority >
-</url>
-<url>
-<loc>https://localhost/cli_travi/produto/extratores-de-pedras-em-em-pe-ultra-uhmw</loc>
-<lastmod>2023-10-17T17:26:12+00:00</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.9</priority >
-</url>
-<url>
-<loc>https://localhost/cli_travi/produto/barras-poliamida</loc>
-<lastmod>2023-10-17T14:49:37+00:00</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.9</priority >
-</url>
-<url>
-<loc>https://localhost/cli_travi/produto/chapa-de-polietileno-uhmw-pe-ultra</loc>
-<lastmod>2020-07-06T14:44:46+00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.9</priority >
 </url>

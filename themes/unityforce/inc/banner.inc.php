@@ -9,7 +9,7 @@
 					voz ressoa e cada voto molda o destino da nossa <br>
 					Caxias do Sul.</p>
 				<div class="banner-btn" data-aos="fade-up" data-aos-duration="700">
-					<a href="#">JUNTE-SE À CAMPANHA</a>
+					<a href="#voluntary" class="wc_goto">JUNTE-SE À CAMPANHA</a>
 				</div>
 			</div>
 			<div class="banner-right-con" data-aos="fade-up" data-aos-duration="700">

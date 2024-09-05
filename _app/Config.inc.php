@@ -5,12 +5,12 @@
         define('SIS_DB_HOST', 'localhost'); //Link do banco de dados no localhost
         define('SIS_DB_USER', 'root'); //Usuário do banco de dados no localhost
         define('SIS_DB_PASS', 'root'); //Senha  do banco de dados no localhost
-        define('SIS_DB_DBSA', 'cli_travi'); //Nome  do banco de dados no localhost
+        define('SIS_DB_DBSA', 'cati'); //Nome  do banco de dados no localhost
     } else {
         define('SIS_DB_HOST', 'localhost'); //Link do banco de dados no servidor
-        define('SIS_DB_USER', 'travi_root'); //Usuário do banco de dados no servidor
-        define('SIS_DB_PASS', '3Nl),UNt];rS'); //Senha  do banco de dados no servidor
-        define('SIS_DB_DBSA', 'travi_db'); //Nome  do banco de dados no servidor
+        define('SIS_DB_USER', 'catianezanotto31_root'); //Usuário do banco de dados no servidor
+        define('SIS_DB_PASS', 'e*,bYGlj9MiP'); //Senha  do banco de dados no servidor
+        define('SIS_DB_DBSA', 'catianezanotto31_db'); //Nome  do banco de dados no servidor
     }
     /*
      * CACHE E CONFIG
@@ -83,6 +83,7 @@
 	define('DB_CURIOSITIES', 'ws_curiosities'); //Tabela Curiosidades da Travi
 	define('DB_CV', 'ws_job_candidates'); //Tabela Currículos
 	define('DB_OUVIDORIA', 'ws_ouvidoria'); //Tabela Ouvidoria
+	define('DB_VOLUNTEERS', 'ws_volunteers'); //Tabela Valuntários
     /*
       AUTO LOAD DE CLASSES
      */

@@ -6,7 +6,7 @@
          */
         define('SITE_NAME', 'Catiane Zanotto'); //Nome do site do cliente
         define('SITE_SUBNAME', 'Candidata a Vereadora'); //Nome do site do cliente
-        define('SITE_DESC', 'SLOGAN DE CAMPANHA'); //Descrição do site do cliente
+        define('SITE_DESC', 'Como candidata a vereadora, estou comprometida em trabalhar incansavelmente por uma Caxias do Sul mais justa, inovadora e próspera.'); //Descrição do site do cliente
         define('SITE_FONT_NAME', ''); //Tipografia do site (https://www.google.com/fonts)
         define('SITE_FONT_WHIGHT', ''); //Tipografia do site (https://www.google.com/fonts)
 
@@ -31,6 +31,7 @@
          * Social Config
          */
         define('SITE_SOCIAL_NAME', 'Catiane Zanotto');
+        define('SITE_SOCIAL_HASHTAG', '#JuntosPorCaxias');
         /* Facebook */
         define('SITE_SOCIAL_FB', 1);
         define('SITE_SOCIAL_FB_APP', ''); //Opcional APP do facebook
