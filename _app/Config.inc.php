@@ -84,6 +84,7 @@
 	define('DB_CV', 'ws_job_candidates'); //Tabela Currículos
 	define('DB_OUVIDORIA', 'ws_ouvidoria'); //Tabela Ouvidoria
 	define('DB_VOLUNTEERS', 'ws_volunteers'); //Tabela Valuntários
+	define('DB_CONTACTS', 'ws_contacts'); //Tabela Valuntários
     /*
       AUTO LOAD DE CLASSES
      */
