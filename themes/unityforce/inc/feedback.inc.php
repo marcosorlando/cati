@@ -46,8 +46,9 @@
 
 				<div class="donate-suggestion w-100 float-left" data-aos="fade-up" data-aos-duration="700">
 					<h3 class="mb-0">VOCÊ GOSTARIA DE SE TORNAR UM DOADOR?</h3>
-					<div class="generic-btn"><a href="javascript:alert('Inserir link para Vaquinha')">DOE
-							AGORA</a></div>
+					<div class="generic-btn">
+						<a href="javascript:alert('Inserir link para Vaquinha')"><i class="fas fa-hand-holding-usd"></i> DOE AGORA</a>
+					</div>
 				</div>
 			</div>
 		</section>

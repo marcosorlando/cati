@@ -38,7 +38,7 @@
          * Consulte estes dados com o serviço de hospedagem
          */
         define('MAIL_HOST', 'mail.catianezanotto.com.br'); //Servidor de e-mail
-        define('MAIL_PORT', '465'); //Porta de envio
+        define('MAIL_PORT', '587'); //Porta de envio
         define('MAIL_USER', 'naoresponda@catianezanotto.com.br'); //E-mail de envio
         define('MAIL_SMTP', 'naoresponda@catianezanotto.com.br'); //E-mail autenticador do envio (Geralmente igual ao
 	    // MAIL_USER,

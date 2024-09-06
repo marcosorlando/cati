@@ -28,7 +28,7 @@
 					<div class="index2-donation-inner-con">
 						<div class="generic-title text-center">
 							<span class="small-txt d-block">APOIE MINHA CAMPANHA</span>
-							<h2>QUALQUER VALOR E BEM-VINDO!</h2>
+							<h2>QUALQUER VALOR É BEM-VINDO!</h2>
 						</div>
 						<div class="generic-btn text-center">
 							<a href="javascript:alert('Vaquinha')"> DOE AGORA <i class="far fa-paper-plane"></i></a>

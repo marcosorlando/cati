@@ -400,8 +400,6 @@
 						$jSON['clear'] = true;
 					}
 
-					$logoMail = $Read->LinkResult(DB_TEMPLATE_LOGOS, 'logo_id', 1, 'logo_mail');
-
 					$arrayData = $PostData;
 					$arrayData['INCLUDE_PATH'] = INCLUDE_PATH;
 					$arrayData['SITE_NAME'] = SITE_NAME;
@@ -411,7 +409,7 @@
 					$arrayData['SITE_ADDR_SITE'] = SITE_ADDR_SITE;
 					$arrayData['BASE'] = BASE;
 					$arrayData['phone_mask'] = $phoneMask;
-					$arrayData['logo_mail'] = BASE . "/uploads/{$logoMail['logo_mail']}";
+					$arrayData['logo_mail'] = BASE .'/uploads/mail/logo.png';;
 
 					require_once __DIR__ . './../_app_capture/class/Template.class.php';
 
@@ -442,6 +440,8 @@
 							$PostData['voluntary_name'],
 							$PostData['voluntary_email']
 						);
+
+						$jSON['trigger'] = AjaxErro("<p>Você recebeu um email. Aguarde em breve entraremos em contato.</p>");
 
 					} else {
 						$jSON['trigger'] = AjaxErro('Desculpe, não foi possível enviar sua mensagem. Entre em contato via E-mail: ' . SITE_ADDR_EMAIL . ' Obrigado!',

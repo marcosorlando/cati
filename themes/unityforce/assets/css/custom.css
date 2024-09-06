@@ -419,7 +419,7 @@ a:hover {
 .generic-btn a {
     color: var(--secondary-color);
     padding: 12px 35px;
-    background: #f4f4f7;
+    background: var(--bg-color-three);
     display: inline-block;
     transition: .3s ease-in-out;
 }
@@ -784,6 +784,7 @@ a:hover {
     color: var(--primary-color);
     background: var(--accent);
     transition: .3s ease-in-out;
+    border-radius: 8px;
 }
 
 .form-con .submit-btn button:focus {
@@ -857,6 +858,7 @@ a:hover {
     width: 91.4%;
     position: relative;
     z-index: 1;
+    margin-top: 12px;
 }
 
 .blog-txt-box span,
@@ -1184,15 +1186,16 @@ a:hover {
 .footer-social-links a {
     width: 46px;
     height: 46px;
-    background: #f4f4f7;
-    color: var(--button-color);
+    background: var(--bg-color-three);
+    color: var(--bg-color-one);
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 8px;
 }
 
 .footer-social-links a:hover {
-    color: var(--primary-color);
+    color: var(--bg-color-three);;
     background: var(--accent);
 }
 
