@@ -54,14 +54,15 @@
 		<h5>Siga-me</h5>
 		<div class="social-icons">
 			<ul class="mb-0 list-unstyled">
-				<li><a href="https://www.linkedin.in/<?= SITE_SOCIAL_LINKEDIN ?>" class="text-decoration-none"><i
+				<li><a target="_blank" href="https://www.linkedin.com/in/<?= SITE_SOCIAL_LINKEDIN ?>"
+				       class="text-decoration-none"><i
 								class="fab fa-linkedin-in social-networks"></i></a>
 				</li>
 				<li>
-					<a href="https://instagram.com/<?= SITE_SOCIAL_INSTAGRAM ?>"
+					<a target="_blank" href="https://instagram.com/<?= SITE_SOCIAL_INSTAGRAM ?>"
 					   class="text-decoration-none"><i
 								class="fab fa-instagram social-networks"></i></a></li>
-				<li><a href="https://www.facebook.com/<?= SITE_SOCIAL_FB_PAGE ?>" class="text-decoration-none"><i
+				<li><a target="_blank" href="https://www.facebook.com/<?= SITE_SOCIAL_FB_PAGE ?>" class="text-decoration-none"><i
 								class="fab fa-facebook-f social-networks"></i></a>
 				</li>
 			</ul>

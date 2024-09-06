@@ -43,7 +43,7 @@
 
 					<?php
 						$Read->ExeRead(DB_CATEGORIES,
-							"WHERE category_parent IS NULL ORDER BY category_name ASC");
+							"WHERE category_parent IS NULL AND category_id IN(SELECT post_category FROM " . DB_POSTS . " WHERE post_status <> 0 AND post_date <= NOW()) ORDER BY category_title ASC");
 
 						if ($Read->getResult()) {
 							foreach ($Read->getResult() as $Cat) {
