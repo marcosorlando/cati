@@ -316,4 +316,30 @@ class Check {
 
 	}
 
+	public static function getSectionContent($html, $seletor) {
+		// Cria um novo objeto DOMDocument
+		$dom = new DOMDocument();
+
+		// Carrega o HTML na variável DOMDocument
+		// Supressão de erros usando '@' para evitar warnings com caracteres não UTF-8
+		@$dom->loadHTML($html);
+
+		// Encontra o elemento pela classe 'section-page'
+		$xpath = new DOMXPath($dom);
+		$sections = $xpath->query("//[contains(@class, '{$seletor}')]");
+
+		// Verifica se a section foi encontrada
+		if ($sections->length > 0) {
+			$sectionContent = "";
+
+			// Concatena o conteúdo das sections encontradas
+			foreach ($sections as $section) {
+				$sectionContent .= $dom->saveHTML($section);
+			}
+
+			return $sectionContent;
+		} else {
+			return "Section with class '{$seletor}' not found.";
+		}
+	}
 }

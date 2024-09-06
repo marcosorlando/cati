@@ -8,7 +8,7 @@
 		</div>
 		<div class="form-con">
 			<form class="form-box j_formsubmit" method="post" id="contact_index" method="post"
-			      enctype="multipart/form-data" novalidate>
+			      enctype="multipart/form-data">
 				<input type="hidden" class="callback" name="callback" value="Leads">
 				<input type="hidden" class="callback-action" name="callback_action" value="voluntary">
 
@@ -54,22 +54,46 @@
 				</div>
 				<label for="privacy" class="label_check mb-3 text-size-14">
 					<input type="checkbox" id="privacy" name="privacy" required tabindex="6">
-					<span> <b class="font_red" style="font-size: 1.3em">*</b>Consinto com a <a
-								rel="shadowbox" href="<?= BASE ?>/politicas-de-privacidade"
-								title="Ler a Política de Privacidade">Política de Privacidade.</a> Ao
-									enviar meus dados, eu autorizo o uso dos mesmos para receber a resposta e
-									comunicações sobre a campanha.</span>
+					<span>
+								<b class="font_red">*</b> Consinto com a
+								<i class="font_red" data-toggle="modal" data-target="#myModal">Política de
+									Privacidade.</i>
+								Ao enviar meus dados, eu autorizo o uso dos mesmos para receber a resposta e comunicações sobre a campanha.
+							</span>
 
 				</label>
 
 				<div class="submit-btn" data-aos="fade-up" data-aos-duration="700">
-					<button type="submit" id="submit" tabindex="7"><i class="fa fa-users"></i><img class="form_load"
-					                                                                               src="<?=
-							INCLUDE_PATH
-						?>/assets/images/load_w.gif" alt="Enviando..."> JUNTE-SE AGORA</button>
+					<button type="submit" id="submit" tabindex="7"><i class="fa fa-users"></i><img class="form_load" src="<?= INCLUDE_PATH ?>/assets/images/load_w.gif" alt="Enviando..."> JUNTE-SE AGORA</button>
 				</div>
 			</form>
 		</div>
 	</div>
 </section>
 <!-- FORM SECTION START HERE -->
+
+<div class="modal" id="myModal" style="align-items: center; justify-content: center;">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<?php
+				$Read = new Read();
+				$page = $Read->LinkResult(DB_PAGES, 'page_name', 'politica-de-protecao-de-dados', 'page_title, page_content');
+			?>
+			<!-- Modal Header -->
+			<div class="modal-header">
+				<h4 class="modal-title"><?=$page['page_title']?></h4>
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+			</div>
+			<!-- Modal body -->
+			<div class="modal-body">
+				<?=$page['page_content']?>
+			</div>
+			<!-- Modal footer -->
+			<div class="modal-footer">
+				<label for="privacy" class="btn btn-danger" data-dismiss="modal">
+					<i class="fa
+				fa-window-close"></i> Fechar</label>
+			</div>
+		</div>
+	</div>
+</div>

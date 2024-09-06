@@ -1,5 +1,5 @@
 <!-- VIDEO SECTION START HERE -->
-<section class="video-section w-100 float-left padding-top padding-bottom">
+<section id="video-section" class="video-section w-100 float-left padding-top padding-bottom">
 	<div class="container">
 		<div class="generic-title text-center">
 			<span class="small-txt d-block" data-aos="fade-up" data-aos-duration="700">A VOZ FEMININA DO
@@ -17,7 +17,7 @@
 			<div id="light">
 				<a class="boxclose" id="boxclose" onclick="lightbox_close();"></a>
 				<div id="VisaChipCardVideo">
-					<iframe width="560" height="315"
+					<iframe width="640" height="360"
 					        src="https://www.youtube.com/embed/rNs8O2uMPK4?si=uPaDMQxi1QjbTSOG"
 					        title="Catiane Zanotto - Minha História"></iframe>
 				</div>

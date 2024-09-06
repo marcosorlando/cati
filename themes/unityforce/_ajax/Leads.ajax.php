@@ -177,192 +177,90 @@
 				}
 				break;
 
-			case 'speaker':
+			case 'contato':
 
-				if (
-					array_search('', $PostData) && (
-						array_search('', $PostData) != 'speaker_why_lecture' &&
-						array_search('', $PostData) != 'speaker_lecture_link' &&
-						array_search('', $PostData) != 'speaker_instagram' &&
-						array_search('', $PostData) != 'speaker_linkedin' &&
-						array_search('', $PostData) != 'speaker_facebook' &&
-						array_search('', $PostData) != 'speaker_youtube'
-					)
-				) {
+				if (array_search('', $PostData)) {
 					$jSON['field'] = array_search('', $PostData);
-					$jSON['trigger'] = AjaxErro('<b> OOPS! </b> Preencha todos os campos obrigatórios!',
+					$jSON['trigger'] = AjaxErro('<b>Oops!</b> Preencha todos os campos obrigatórios!',
 						E_USER_NOTICE);
 
-				} elseif (!Check::Email($PostData['speaker_email']) || !filter_var($PostData['speaker_email'],
+				} elseif (!Check::Email($PostData['contact_email']) || !filter_var($PostData['contact_email'],
 						FILTER_VALIDATE_EMAIL)) {
-					$jSON['field'] = 'speaker_email';
-					$jSON['trigger'] = AjaxErro('<b> OOPS! </b> E-mail informado não é válido!',
+					$jSON['field'] = 'contact_email';
+					$jSON['trigger'] = AjaxErro('<b>Oops!</b> E-mail informado não é válido!',
 						E_USER_ERROR);
 
 				} elseif (!isset($PostData['privacy'])) {
 					$jSON['field'] = 'privacy';
-					$jSON['trigger'] = AjaxErro('<b> OOPS! </b> Você precisa estar em consentimento com nossa Política de Privacidade.',
+					$jSON['trigger'] = AjaxErro('<b>Oops!</b> Você precisa estar em consentimento com nossa Política de Privacidade.',
 						E_USER_ERROR);
 
 				} else {
-					$PostData['speaker_name'] = Check::Capitalise($PostData['speaker_name']);
-					$PostData['speaker_lastname'] = Check::Capitalise($PostData['speaker_lastname']);
-					$phoneMask = $PostData['speaker_phone'];
-					$PostData['speaker_phone'] = Check::clearNumber($PostData['speaker_phone']);
-					$PostData['speaker_email'] = mb_strtolower($PostData['speaker_email']);
-					$PostData['speaker_yes'] = isset($PostData['speaker_yes']) ? 1 : 0;
+
+					$PostData['contact_name'] = Check::getCapilalize($PostData['contact_name']);
+					$phoneMask = $PostData['contact_phone'];
+					$PostData['contact_phone'] = Check::clearNumber($PostData['contact_phone']);
+					$PostData['contact_cep'] = preg_replace('/[\D]/', '', $PostData['contact_cep']);
+					$PostData['contact_email'] = mb_strtolower($PostData['contact_email']);
 					$PostData['privacy'] = isset($PostData['privacy']) ? 1 : 0;
 					$PostData['status'] = 0;
-					$PostData['speaker_facebook'] = Check::clearSocial($PostData['speaker_facebook']);
-					$PostData['speaker_linkedin'] = Check::clearSocial($PostData['speaker_linkedin']);
-					$PostData['speaker_instagram'] = Check::clearSocial($PostData['speaker_instagram']);
-					$PostData['speaker_youtube'] = Check::clearSocial($PostData['speaker_youtube']);
 
-					//UPLOAD FOTO
-					if (!empty($_FILES['speaker_thumb'])) {
-						$File = $_FILES['speaker_thumb'];
+					$Create = new Create();
+					$Create->ExeCreate(DB_CONTACTS, $PostData);
 
-						$Read = new Read();
-						$Read->ExeRead(DB_SPEAKERS,
-							" WHERE speaker_email = :email ORDER BY speaker_id DESC LIMIT :limit",
-							"email={$PostData['speaker_email']}&limit=1");
+					if ($Create->getResult()) {
+						$jSON['trigger'] = AjaxErro("<p>Obrigado! <b>{$PostData['contact_name']}</b>, seu registro foi recebido com sucesso!</p>");
+						$jSON['clear'] = true;
+					}
 
-						if ($Read->getResult()) {
-							$ThisCandidate = $Read->getResult()[0];
-							if ($ThisCandidate['speaker_thumb'] &&
-								file_exists("../../../uploads/{$ThisCandidate['speaker_thumb']}")
-								&& !is_dir("../../../uploads/{$ThisCandidate['speaker_thumb']}")) {
-								unlink("../../../uploads/{$ThisCandidate['speaker_thumb']}");
-							}
+					$arrayData = $PostData;
+					$arrayData['INCLUDE_PATH'] = INCLUDE_PATH;
+					$arrayData['SITE_NAME'] = SITE_NAME;
+					$arrayData['SITE_ADDR_NAME'] = SITE_ADDR_NAME;
+					$arrayData['SITE_ADDR_PHONE_A'] = SITE_ADDR_PHONE_A;
+					$arrayData['SITE_ADDR_EMAIL'] = SITE_ADDR_EMAIL;
+					$arrayData['SITE_ADDR_SITE'] = SITE_ADDR_SITE;
+					$arrayData['BASE'] = BASE;
+					$arrayData['phone_mask'] = $phoneMask;
+					$arrayData['logo_mail'] = BASE .'/uploads/mail/logo.png';;
 
-							$Upload = new Upload(__DIR__ . '/../../../uploads/');
-							$Upload->Image(
-								$File,
-								Check::Name("{$PostData['speaker_name']}-{$PostData['speaker_lastname']}") . '-thumb',
-								600,
-								'speakers'
-							);
+					require_once __DIR__ . './../_app_capture/class/Template.class.php';
 
-							if ($Upload->getResult()) {
-								$PostData['speaker_thumb'] = $Upload->getResult();
+					$MailContent = Template::setTemplate(Template::getTemplate('contact_mail.html',
+						__DIR__ . '/../templates/'), $arrayData);
 
-							} else {
-								$jSON['trigger'] = AjaxErro("<b class='fas fa-image'> ERRO AO ENVIAR IMAGEM:</b> Olá, selecione um arquivo em .jpg ou .png para anexar.",
-									E_USER_WARNING);
-								echo json_encode($jSON);
-								return;
-							}
+					$Email = new Email();
+					$Email->EnviarMontando(
+						"Novo voluntária(o) registrada(o) site",
+						$MailContent,
+						$PostData['contact_name'],
+						$PostData['contact_email'],
+						SITE_ADDR_NAME,
+						$arrayData['SITE_ADDR_EMAIL']
+					);
 
-							$Update = new Update();
-							$Update->ExeUpdate(DB_SPEAKERS, $PostData, "WHERE speaker_email = :email",
-								"email={$PostData['speaker_email']}");
+					if (!$Email->getError()) {
+						$MailConfirmation = Template::setTemplate(Template::getTemplate('contact_return_mail.html',
+							__DIR__ . '/../templates/'), $arrayData);
 
-							if ($Update->getResult()) {
-								$jSON['trigger'] = AjaxErro("<i class='fas fa-user-astronaut'></i> Registro atualizado com sucesso!");
-							}
+						$ResponseEmail = new Email();
 
-						} else {
-							$Upload = new Upload('../../../uploads/');
-							$Upload->Image(
-								$File,
-								Check::Name("{$PostData['speaker_name']}-{$PostData['speaker_lastname']}") . '-thumb',
-								600,
-								'speakers'
-							);
-
-							if ($Upload->getResult()) {
-								$PostData['speaker_thumb'] = $Upload->getResult();
-							} else {
-								$jSON['trigger'] = AjaxErro("<i class='fas fa-image'></i> <b> ERRO AO ENVIAR IMAGEM:</b> Olá, selecione um arquivo em .jpg ou .png para anexar.",
-									E_USER_WARNING);
-								echo json_encode($jSON);
-								return;
-							}
-
-							$Create = new Create();
-							$Create->ExeCreate(DB_SPEAKERS, $PostData);
-
-							if ($Create->getResult()) {
-								$jSON['trigger'] = AjaxErro("<b> {$PostData['speaker_name']}, seu cadastro foi recebido com sucesso! Aguarde nosso contato.</b>");
-								$jSON['redirect'] = BASE . "/obrigado-inspiradora&id={$PostData['city_id']}";
-
-							}
-						}
-
-						$speakerCity = $Read->LinkResult(DB_CITIES, 'id', $PostData['speaker_city'], 'name');
-						$eventCity = $Read->LinkResult(DB_CITIES, 'id', $PostData['city_id'], 'name');
-						$logoMail = $Read->LinkResult(DB_TEMPLATE_LOGOS, 'logo_id', 1, 'logo_mail');
-
-						$arrayData = $PostData;
-						$arrayData['INCLUDE_PATH'] = INCLUDE_PATH;
-						$arrayData['SITE_NAME'] = SITE_NAME;
-						$arrayData['SITE_ADDR_NAME'] = SITE_ADDR_NAME;
-						$arrayData['SITE_ADDR_PHONE_A'] = SITE_ADDR_PHONE_A;
-						$arrayData['SITE_ADDR_EMAIL'] = 'contato@ellalidera2024.com.br';
-						$arrayData['SITE_ADDR_SITE'] = SITE_ADDR_SITE;
-						$arrayData['BASE'] = BASE;
-						$arrayData['phone_mask'] = $phoneMask;
-						$arrayData['speaker_city'] = $speakerCity['name'];
-						$arrayData['event_city'] = $eventCity['name'];
-						$arrayData['logo_mail'] = BASE . "/uploads/{$logoMail['logo_mail']}";
-						$arrayData['speaker_yes'] = ($arrayData['speaker_yes'] == 1 ? "<p>Já realizou alguma atividade (palestra, workshop, pitch, treinamento)? <b>Sim</b> </p>" : '');
-						$arrayData['speaker_lecture_link'] = (!empty($arrayData['speaker_lecture_link']) ? "<p><b>Link para evento:</b> <a href='{$arrayData['speaker_lecture_link']}'>{$arrayData['speaker_lecture_link']}</a></p>" : '');
-						$arrayData['full_name'] = "{$arrayData['speaker_name']} {$arrayData['speaker_lastname']}";
-
-						$arrayData['speaker_social_media'] = null;
-
-						$arrayData['speaker_social_media'] .= ((!empty($PostData['speaker_facebook'])) ? "<p><b>Facebook: </b><a href='https://fb.com/{$PostData['speaker_facebook']}' title='Visitar perfil no Facebook' target='_new'>@{$PostData['speaker_facebook']}</a></p>" : '');
-
-						$arrayData['speaker_social_media'] .= ((!empty($PostData['speaker_linkedin'])) ? "<p><b>Linkedin: </b><a href='https://www.linkedin.com/in/{$PostData['speaker_linkedin']}' title='Visitar perfil no Linkedin' target='_new'>@{$PostData['speaker_linkedin']}</a></p>" : '');
-
-						$arrayData['speaker_social_media'] .= ((!empty($PostData['speaker_instagram'])) ? "<p><b>Instagram: </b><a href='https://www.instagram.com//{$PostData['speaker_instagram']}' title='Visitar perfil no Instagram' target='_new'>@{$PostData['speaker_instagram']}</a></p>" : '');
-
-						$arrayData['speaker_social_media'] .= ((!empty($PostData['speaker_youtube'])) ? "<p><b>Youtube: </b><a href='https://www.youtube.com/@{$PostData['speaker_youtube']}' title='Visitar canal no Youtube' target='_new'>@{$PostData['speaker_youtube']}</a></p>" : '');
-
-
-						require_once __DIR__ . './../_app_capture/class/Template.class.php';
-
-						$MailContent = Template::setTemplate(Template::getTemplate('speaker_mail.html',
-							__DIR__ . '/../templates/'),
-							$arrayData);
-
-						$Email = new Email();
-						//$Email->addFile($anexo);
-						$Email->EnviarMontando(
-							"Novo Inspirador(a) registrado no Ella Lidera " . date('Y'),
-							$MailContent,
-							$PostData['speaker_name'],
-							$PostData['speaker_email'],
-							SITE_ADDR_NAME,
-							$arrayData['SITE_ADDR_EMAIL']
+						$ResponseEmail->EnviarMontando(
+							'Confirmação de recebimento Catiane Zanotto - 11112 ',
+							$MailConfirmation,
+							MAIL_SENDER,
+							MAIL_USER,
+							$PostData['contact_name'],
+							$PostData['contact_email']
 						);
 
-						if (!$Email->getError()) {
-							$MailConfirmation = Template::setTemplate(Template::getTemplate('speaker_return_mail.html',
-								__DIR__ . '/../templates/'), $arrayData);
-
-							$ResponseEmail = new Email();
-
-							$ResponseEmail->EnviarMontando(
-								'Confirmação de recebimento Ella Lidera ' . date('Y'),
-								$MailConfirmation,
-								MAIL_SENDER,
-								MAIL_USER,
-								$PostData['speaker_name'],
-								$PostData['speaker_email']
-							);
-
-						} else {
-							$jSON['trigger'] = AjaxErro('Desculpe, não foi possível enviar sua mensagem. Entre em contato via E-mail: ' . SITE_ADDR_EMAIL . ' Obrigado!',
-								E_USER_ERROR);
-						}
+						$jSON['trigger'] = AjaxErro("<p>Você recebeu um email. Aguarde em breve entraremos em contato.</p>");
 
 					} else {
-						unset($PostData['speaker_thumb']);
+						$jSON['trigger'] = AjaxErro('Desculpe, não foi possível enviar sua mensagem. Entre em contato via E-mail: ' . SITE_ADDR_EMAIL . ' Obrigado!',
+							E_USER_ERROR);
 					}
 				}
-
-				break;
 
 			case 'voluntary':
 

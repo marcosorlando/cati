@@ -71,13 +71,15 @@
 			</div>
 			<div class="nav-btns d-flex align-items-center">
 				<ul class="list-unstyled mb-0 d-flex">
-					<li><a href="https://www.facebook.com/<?= SITE_SOCIAL_FB_PAGE ?>"><i class="fab
+					<li><a target="_blank" href="https://www.facebook.com/<?= SITE_SOCIAL_FB_PAGE ?>"><i class="fab
 					fa-facebook-f"></i></a></li>
-					<li><a href="https://instagram.com/<?= SITE_SOCIAL_INSTAGRAM ?>"><i class="fab fa-instagram"></i></a></li>
-					<li><a href="https://www.linkedin.in/<?= SITE_SOCIAL_LINKEDIN?>"><i class="fab fa-linkedin"></i></a></li>
+					<li><a target="_blank" href="https://instagram.com/<?= SITE_SOCIAL_INSTAGRAM ?>"><i class="fab
+					fa-instagram"></i></a></li>
+					<li><a target="_blank" href="https://www.linkedin.com/in/<?= SITE_SOCIAL_LINKEDIN?>"><i class="fab
+					fa-linkedin"></i></a></li>
 				</ul>
 				<div class="donate-btn">
-					<a href="donation.html">
+					<a href="javascript:alert('Vaquinha')">
 						<i class="fas fa-hand-holding-usd"></i> DOAÇÃO
 					</a>
 				</div>

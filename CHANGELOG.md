@@ -138,3 +138,22 @@ POST FIXES:
 + FIX Instant Articles Alert,
 + FIX Category Navigation,
 + FIX TAG Navigation
+
+CREATE TABLE `ws_contacts` (
+`contact_id` int unsigned NOT NULL AUTO_INCREMENT,
+`contact_name` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+`contact_email` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+`contact_phone` char(30) COLLATE utf8mb4_general_ci DEFAULT NULL,
+`contact_cep` char(9) COLLATE utf8mb4_general_ci DEFAULT NULL,
+`contact_ibge` char(30) COLLATE utf8mb4_general_ci DEFAULT NULL,
+`contact_uf` char(2) COLLATE utf8mb4_general_ci DEFAULT NULL,
+`contact_city` varchar(155) COLLATE utf8mb4_general_ci DEFAULT NULL,
+`contact_street` varchar(155) COLLATE utf8mb4_general_ci DEFAULT NULL,
+`contact_district` varchar(155) COLLATE utf8mb4_general_ci DEFAULT NULL,
+`contact_message` text COLLATE utf8mb4_general_ci,
+`privacy` tinyint(1) DEFAULT NULL,
+`status` tinyint(1) DEFAULT '0',
+`created_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+`update_at` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
+PRIMARY KEY (`contact_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;

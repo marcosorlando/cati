@@ -89,6 +89,10 @@ span.small-txt::before {
 .bold {
     font-weight: 600 !important;
 }
+.text-size-14{
+    font-size: 14px !important;
+    line-height: 14px !important;
+}
 
 .generic-title span {
     margin-bottom: 22px;
@@ -135,7 +139,7 @@ a:hover {
 /* header section styling start here */
 .header-main-con {
     position: absolute;
-    z-index: 9999;
+    z-index: 999;
     top: 0;
 }
 
@@ -144,10 +148,12 @@ a:hover {
 }
 
 .header-main-con .navbar-light .navbar-nav .nav-link {
-    color: var(--secondary-color);
+    color: #ffffff;
     position: relative;
     transition: .3s ease-in-out;
     text-transform: uppercase;
+    font-weight: 650px;
+    letter-spacing: 1px;
 }
 
 .header-main-con .navbar-light .navbar-nav .nav-link:hover {
@@ -221,6 +227,7 @@ a:hover {
     color: var(--primary-color);
     transition: .3s ease-in-out;
     border: 1px solid var(--primary-color);
+    border-radius: 24px;
 }
 
 .header-main-con .nav-btns ul li a:hover {
@@ -228,7 +235,9 @@ a:hover {
     color: var(--primary-color);
     border-color: var(--button-color);
 }
-
+.header-main-con .nav-btns ul li a i{
+    font-size: 1.2em;
+}
 .header-main-con .nav-btns ul {
     gap: 10px;
 }
@@ -239,6 +248,7 @@ a:hover {
     background: var(--thirty-color);
     transition: .3s ease-in-out;
     font-weight: 600;
+    border-radius: 8px;
 }
 
 .header-main-con .donate-btn a:hover {
@@ -648,7 +658,7 @@ a:hover {
     position: absolute;
     top: 62%;
     left: 50%;
-    max-width: 600px;
+    max-width: 650px;
     max-height: 360px;
     z-index: 1002;
     overflow: visible;
@@ -1075,6 +1085,10 @@ a:hover {
     background: #2fcc24;
 }
 
+.section-page{
+    padding: 80px 0;
+}
+
 /* donate section styling end here */
 /* footer section styling start here */
 .footer-logo-box .header-contact-btn a {
@@ -1191,12 +1205,19 @@ a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 8px;
+    border-radius: 23px;
+     transition: all ease-in-out .5s;
 }
 
 .footer-social-links a:hover {
     color: var(--bg-color-three);;
     background: var(--accent);
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+    margin-top: -5px;
+    transition: all ease-in-out .5s;
+}
+.footer-social-links a i{
+    font-size: 1.4em;
 }
 
 .footer-contact-box ul {
@@ -1549,7 +1570,7 @@ a:hover {
 }
 
 .index2-about-left-con {
-    padding: 54px 0;
+    padding: 34px 0;
 }
 
 .index2-about-left-con .generic-btn a {
@@ -2110,11 +2131,12 @@ a:hover {
 
 .label_check input {
     cursor: pointer;
-    width: auto;
+    width: 15px;
     position: absolute;
-    left: 4px;
-    top: 9px;
-    height: 25px
+    left: 2px;
+    top: 5px;
+    height: 15px;
+    font-size: 1.3em;
 }
 
 .cta-city a {
@@ -2216,6 +2238,8 @@ a:hover {
     -webkit-animation-name: fadeOut;
     animation-name: fadeOut;
 }
+
+
 
 @-webkit-keyframes fadeOut {
     0% {
@@ -2394,10 +2418,10 @@ a:hover {
 .sub-banner-section {
     background: url(../images/sub-banner-bg-img.jpg) no-repeat center;
     background-size: cover;
-    height: 400px;
+    height: 430px;
     position: relative;
     overflow: hidden;
-    padding-top: 13px;
+    padding-top: 50px;
     padding-bottom: 0;
 }
 
@@ -2735,7 +2759,7 @@ a:hover {
     transition: background-color .3s, opacity .5s, visibility .5s;
     opacity: 0;
     visibility: hidden;
-    z-index: 99999;
+    z-index: 999;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -2787,11 +2811,12 @@ a:hover {
 }
 
 .loader {
+    content: url("../images/about-right-img.png");
     position: absolute;
     left: 50%;
     top: 50%;
-    width: 50px;
-    height: 50px;
+    width: 70px;
+    height: 70px;
     font-size: 0;
     color: var(--accent);
     display: inline-block;

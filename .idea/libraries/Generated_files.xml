@@ -5,6 +5,7 @@
         <item url="file://$PROJECT_DIR$/_cdn/workcontrol.min.js" />
         <item url="file://$PROJECT_DIR$/themes/unityforce/assets/js/ajax-form.min.js" />
         <item url="file://$PROJECT_DIR$/themes/unityforce/assets/js/contact-form.min.js" />
+        <item url="file://$PROJECT_DIR$/themes/unityforce/assets/js/custom.min.js" />
         <item url="file://$PROJECT_DIR$/themes/unityforce/lp/js/lp.min.js" />
         <item url="file://$PROJECT_DIR$/themes/unityforce/lp/js/lp.min.min.js" />
       </sourceFilesUrls>
@@ -13,6 +14,7 @@
       <root url="file://$PROJECT_DIR$/_cdn/workcontrol.min.js" />
       <root url="file://$PROJECT_DIR$/themes/unityforce/assets/js/ajax-form.min.js" />
       <root url="file://$PROJECT_DIR$/themes/unityforce/assets/js/contact-form.min.js" />
+      <root url="file://$PROJECT_DIR$/themes/unityforce/assets/js/custom.min.js" />
       <root url="file://$PROJECT_DIR$/themes/unityforce/lp/js/lp.min.js" />
       <root url="file://$PROJECT_DIR$/themes/unityforce/lp/js/lp.min.min.js" />
     </CLASSES>

@@ -20,19 +20,19 @@
 			<div class="footer-list-box footer-links">
 				<span class="small-txt d-block position-relative">Visão Geral</span>
 				<ul class="list-unstyled mb-0">
-					<li class="position-relative"><a href="donation.html">Doação</a></li>
-					<li class="position-relative"><a href="contact.html">Junte-se a nós</a></li>
-					<li class="position-relative"><a href="about.html">Voluntariado</a></li>
-					<li class="position-relative"><a href="contact.html">Contato</a></li>
+					<li class="position-relative"><a href="javascript:alert('Vaquinha')">Doação</a></li>
+					<li class="position-relative"><a href="<?= BASE ?>/#voluntary">Junte-se a nós</a></li>
+					<li class="position-relative"><a href="<?= BASE ?>/artigos/minhas-propostas">Propostas</a></li>
+					<li class="position-relative"><a href="<?= BASE ?>/contato">Contato</a></li>
 				</ul>
 			</div>
 			<div class="footer-list-box footer-links">
 				<span class="small-txt d-block position-relative">Links Rápidos</span>
 				<ul class="list-unstyled mb-0">
-					<li class="position-relative"><a href="index.html">Home</a></li>
-					<li class="position-relative"><a href="about.html">Sobre mim</a></li>
-					<li class="position-relative"><a href="single-blog.html">Blogs</a></li>
-					<li class="position-relative"><a href="contact.html">Fale Comigo</a></li>
+					<li class="position-relative"><a href="<?= BASE ?>">Home</a></li>
+					<li class="position-relative"><a href="<?= BASE ?>/sobre">Sobre mim</a></li>
+					<li class="position-relative"><a href="<?= BASE ?>/artigos/blog">Blogs</a></li>
+					<li class="position-relative"><a href="<?= BASE ?>/contato">Fale Comigo</a></li>
 				</ul>
 			</div>
 			<div class="footer-list-box footer-contact-box">
@@ -46,10 +46,12 @@
 								href="mailto:<?= SITE_ADDR_EMAIL ?>"><?= SITE_ADDR_EMAIL ?></a></li>
 				</ul>
 				<div class="footer-social-links">
-					<a href="https://www.facebook.com/<?= SITE_SOCIAL_FB_PAGE ?>"><i class="fab
+					<a target="_blank" href="https://www.facebook.com/<?= SITE_SOCIAL_FB_PAGE ?>"><i class="fab
 					fa-facebook-f"></i></a>
-					<a href="https://instagram.com/<?= SITE_SOCIAL_INSTAGRAM ?>"><i class="fab fa-instagram"></i></a>
-					<a href="https://www.linkedin.in/<?= SITE_SOCIAL_LINKEDIN ?>"><i class="fab fa-linkedin"></i></a>
+					<a target="_blank" href="https://instagram.com/<?= SITE_SOCIAL_INSTAGRAM ?>"><i class="fab
+					fa-instagram"></i></a>
+					<a target="_blank" href="https://www.linkedin.com/in/<?= SITE_SOCIAL_LINKEDIN ?>"><i class="fab
+					fa-linkedin"></i></a>
 
 
 				</div>

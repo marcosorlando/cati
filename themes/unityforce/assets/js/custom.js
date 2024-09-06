@@ -549,7 +549,7 @@ document.addEventListener("DOMContentLoaded", function () {
         } else {
             menu.classList.remove("sticky");
             logo.src = PATH + "/assets/images/header-logo.png";
-            $('a.nav-link').css("color","#003973")
+            $('a.nav-link').css("color","#ffffff")
         }
     };
 });
