@@ -94,13 +94,13 @@
 					$PostData['email'] = mb_strtolower($PostData['email']);
 					$PostData['privacy'] = isset($PostData['privacy']) ? 1 : 0;
 
-					/*$Create = new Create();
+					$Create = new Create();
 					$Create->ExeCreate(DB_VOLUNTEERS, $PostData);
 
 					if ($Create->getResult()) {
 						$jSON['trigger'] = AjaxErro("<b> Recebemos sua mensagem com sucesso!</b>");
 						$jSON['redirect'] = BASE."/obrigado-contato";
-					}*/
+					}
 
 					//$voluntaryCity = $Read->LinkResult(DB_CITIES, 'id', $PostData['voluntary_city'], 'name');
 					//$eventCity = $Read->LinkResult(DB_CITIES, 'id', $PostData['city_id'], 'name');
@@ -203,7 +203,7 @@
 					$PostData['contact_cep'] = preg_replace('/[\D]/', '', $PostData['contact_cep']);
 					$PostData['contact_email'] = mb_strtolower($PostData['contact_email']);
 					$PostData['privacy'] = isset($PostData['privacy']) ? 1 : 0;
-					$PostData['status'] = 0;
+					$PostData['status'] = 1;
 
 					$Create = new Create();
 					$Create->ExeCreate(DB_CONTACTS, $PostData);
@@ -261,6 +261,7 @@
 							E_USER_ERROR);
 					}
 				}
+				break;
 
 			case 'voluntary':
 

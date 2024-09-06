@@ -463,7 +463,7 @@
 
 		</div>
 		<!--ACCESS-->
-		<?php require './_cdn/widgets/accessibility/accessibility.inc.php'; ?>
+		<?php //require './_cdn/widgets/accessibility/accessibility.inc.php'; ?>
 
 		</body>
 		</html>

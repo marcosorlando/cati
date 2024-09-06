@@ -44,7 +44,7 @@ $(function () {
                     
                     /*REALÇA DADOS INVALIDOS*/
                     if (data.clear) {
-                        form.find(':input');
+                        $(form)[0].reset();
                     }
                     
                     //REDIRECIONA

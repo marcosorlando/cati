@@ -34,8 +34,7 @@
 					</figure>
 				</div>
 
-				<form class="form-box j_formsubmit" method="post" id="contactpage" method="post"
-				      enctype="multipart/form-data">
+				<form class="form-box j_formsubmit" method="post" id="contactpage">
 
 					<input type="hidden" class="callback" name="callback" value="Leads">
 					<input type="hidden" class="callback-action" name="callback_action" value="contato">
@@ -91,7 +90,11 @@
 						</label>
 					</div>
 					<div class="submit-btn" data-aos="fade-up" data-aos-duration="700">
-						<button type="submit" id="submit"><i class="far fa-paper-plane"></i> ENVIAR MENSAGEM</button>
+						<button type="submit" value="1" id="submit"><i class="far fa-paper-plane"></i><img
+									class="form_load"
+									src="<?= INCLUDE_PATH ?>/assets/images/load_w.gif" alt="Enviando..."> ENVIAR
+							MENSAGEM
+						</button>
 					</div>
 				</form>
 			</div>
