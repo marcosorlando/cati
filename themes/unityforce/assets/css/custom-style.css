@@ -616,12 +616,12 @@ a.item-link{margin-top: 10px; display: inline-block}
     background: var(--button-color);
     color: #ffffff;
     border-radius: 8px;
-    padding: 10px 18px;
+    padding: 5px 10px;
     display: inline-block;
     text-align: center;
     transition: all 0.3s ease-in-out;
-    margin-right: 4px;
-	border: 1px solid transparent;
+    margin: 4px;
+    border: 1px solid transparent;
 }
 .singleblog-section .content4 .tag .button2{
     padding: 10px 24px;
