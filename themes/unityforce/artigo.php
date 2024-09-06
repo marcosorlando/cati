@@ -49,9 +49,9 @@
 
 					<div class="content1" data-aos="fade-up" data-aos-duration="700">
 						<h4><?= $post_title; ?></h4>
-						<span class="text-size-14 text-mr">Por: <i class="fa-solid fa-user"></i> <?= $AuthorName;
+						<span class="text-size-14 text-mr">Por: <i class="fas fa-user"></i> <?= $AuthorName;
 							?></span>
-						<i class="mb-0 calendar fa-solid fa-calendar-days"></i>
+						<i class="mb-0 calendar fas fa-calendar"></i>
 						<span class="mb-0 text-size-14"><time datetime="<?= date('Y-m-d', strtotime($post_date)); ?>"
 						                                      pubdate="pubdate"><?= utf8_encode(strftime(" %d de %B de %Y",
 									strtotime($post_date))); ?></time></span>
