@@ -91,7 +91,7 @@
 			<meta property="og:url" content="<?= BASE; ?>/<?= $getURL; ?>"/>
 			<meta property="og:site_name" content="<?= SITE_NAME; ?>"/>
 			<meta property="og:locale" content="pt_BR"/>
-			<meta name="facebook-domain-verification" content="wjmri0pyl9je1o7uib842pgyaleoz6"/>
+			<meta name="facebook-domain-verification" content="6dil8sjfc3azp9o9ewlbvlfro5xvr1" />
 			<?php
 
 				if (SITE_SOCIAL_FB) {

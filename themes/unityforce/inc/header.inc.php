@@ -52,8 +52,8 @@
 									SITE_NAME . " | {$Cat['category_title']}' href='" . BASE . "/artigos/{$Cat['category_name']}' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'> {$Cat['category_title']} </a>";
 
 								$Read->ExeRead(DB_CATEGORIES,
-									"WHERE category_parent = :ct ORDER BY category_name ASC",
-									"ct={$Cat['category_id']}");
+									"WHERE category_parent = :pr AND category_id IN(SELECT post_category_parent FROM " . DB_POSTS . " WHERE post_status = 1 AND post_date <= NOW()) ORDER BY category_title ASC",
+									"pr={$Cat['category_id']}");
 								if ($Read->getResult()) {
 									echo "<div class='dropdown-menu' aria-labelledby='navbarDropdown5'>";
 									echo "<ul class='list-unstyled mb-0'>";
