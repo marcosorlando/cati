@@ -21,7 +21,7 @@
      * AUTO MANAGER
      */
     define('DB_AUTO_TRASH', 1); //Remove todos os itens não gerenciados do banco!
-    define('DB_AUTO_PING', 0); //Tenta enviar 1x por dia o sitemap e o RSS para o Google/Bing
+    define('DB_AUTO_PING', 1); //Tenta enviar 1x por dia o sitemap e o RSS para o Google/Bing
     /*
      * TABELAS
      */

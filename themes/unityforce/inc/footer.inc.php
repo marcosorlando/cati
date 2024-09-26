@@ -20,7 +20,7 @@
 			<div class="footer-list-box footer-links">
 				<span class="small-txt d-block position-relative">Visão Geral</span>
 				<ul class="list-unstyled mb-0">
-					<li class="position-relative"><a href="javascript:alert('Vaquinha')">Doação</a></li>
+					<!--<li class="position-relative"><a href="javascript:alert('Vaquinha')">Doação</a></li>-->
 					<li class="position-relative"><a href="<?= BASE ?>/#voluntary">Junte-se a nós</a></li>
 					<li class="position-relative"><a href="<?= BASE ?>/artigos/minhas-propostas">Propostas</a></li>
 					<li class="position-relative"><a href="<?= BASE ?>/contato">Contato</a></li>

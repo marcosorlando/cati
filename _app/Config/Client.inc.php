@@ -35,9 +35,9 @@
         /* Facebook */
         define('SITE_SOCIAL_FB', 1);
         define('SITE_SOCIAL_FB_APP', ''); //Opcional APP do facebook
-        define('SITE_SOCIAL_FB_AUTHOR', ''); //https://www.facebook.com/?????
+        define('SITE_SOCIAL_FB_AUTHOR', 'catiane.zanotto'); //https://www.facebook.com/?????
         define('SITE_SOCIAL_FB_PAGE', 'catiane.zanotto'); //https://www.facebook.com/?????
-        define('SITE_SOCIAL_FB_PAGE_ID', ''); //ID da Fanpage
+        define('SITE_SOCIAL_FB_PAGE_ID', '363146463558178'); //ID da Fanpage
         /* Twitter */
         define('SITE_SOCIAL_TWITTER', ''); //https://www.twitter.com/?????
         /* YouTube */

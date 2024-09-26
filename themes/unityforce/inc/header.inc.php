@@ -78,14 +78,14 @@
 					<li><a target="_blank" href="https://www.linkedin.com/in/<?= SITE_SOCIAL_LINKEDIN?>"><i class="fab
 					fa-linkedin"></i></a></li>
 				</ul>
-				<div class="donate-btn">
+				<!--<div class="donate-btn">
 					<a href="javascript:alert('Vaquinha')">
 						<i class="fas fa-hand-holding-usd"></i> DOAÇÃO
 					</a>
-				</div>
-				<div class="header-contact-btn">
-					<a target="_blank" title="Envie uma Mensagem para Cati" href="<?=Check::WhatsMessage(SITE_ADDR_WHATS, 'Olá Catiane,...')?>"><i class="fab fa-whatsapp"></i> <?= SITE_ADDR_WHATS ?></a>
-				</div>
+				</div>-->
+				<!--<div class="header-contact-btn">
+					<a target="_blank" title="Envie uma Mensagem para Cati" href="<php /*=Check::WhatsMessage(SITE_ADDR_WHATS, 'Olá Catiane,...')*/?>"><i class="fab fa-whatsapp"></i> <php /*= SITE_ADDR_WHATS */?></a>
+				</div>-->
 			</div>
 		</nav>
 	</div>

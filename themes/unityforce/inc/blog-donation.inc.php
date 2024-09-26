@@ -24,7 +24,7 @@
 						?>
 					</div>
 				</div>
-				<div class="index2-donation-section w-100 float-left m-4">
+				<!--<div class="index2-donation-section w-100 float-left m-4">
 					<div class="index2-donation-inner-con">
 						<div class="generic-title text-center">
 							<span class="small-txt d-block">APOIE MINHA CAMPANHA</span>
@@ -34,7 +34,7 @@
 							<a href="javascript:alert('Vaquinha')"> DOE AGORA <i class="far fa-paper-plane"></i></a>
 						</div>
 					</div>
-				</div>
+				</div>-->
 			</div>
 		</section>
 		<?php

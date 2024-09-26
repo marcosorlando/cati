@@ -133,12 +133,12 @@
          * !!!! IMPORTANTE :: Para utilizar ultra segmentação de produtos e imóveis
          * é precisso antes configurar os catálogos de produtos respectivamente!
          */
-        define('SEGMENT_FB_PIXEL_ID', ''); //Id do pixel de rastreamento
+        define('SEGMENT_FB_PIXEL_ID', '404564435755301'); //Id do pixel de rastreamento
         define('SEGMENT_WC_USER', 1); //Enviar dados do login de usuário?
         define('SEGMENT_WC_BLOG', 1); //Ultra segmentar páginas do BLOG?
-        define('SEGMENT_GL_ANALYTICS', ''); //ID do Google Analytics (GA4)
+        define('SEGMENT_GL_ANALYTICS', 'G-E321B1LHJZ'); //ID do Google Analytics (GA4)
         define('SEGMENT_GL_TAGMANAGER', ''); //ID do Google Analytics (GA4)
-        define('SEGMENT_FB_PAGE_ID', ''); //ID do Facebook Pages (Obrigatório para POST - Instant Article)
+        define('SEGMENT_FB_PAGE_ID', '363146463558178'); //ID do Facebook Pages (Obrigatório para POST - Instant Article)
         define('SEGMENT_GL_ADWORDS_ID', ''); //ID do pixel do Adwords (-to do o site)
         define('SEGMENT_GL_ADWORDS_LABEL', ''); //Label do pixel do Adwords (to do o site)
 
